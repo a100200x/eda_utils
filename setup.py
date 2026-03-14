@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='edautilsa100200x',
-      version='0.1',
+      version='0.2',
       description='EDA_utilities',
       packages=['edautilsa100200x'],
       author_email='author@gmail.com',
