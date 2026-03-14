@@ -2,6 +2,7 @@
 
 # Импортируем функцию из вложенного модуля
 from .styles.grafics import set_figure_gradient
+import os
 
 def use_style(style_name='style_1'):
     """Применить стиль matplotlib из пакета"""
