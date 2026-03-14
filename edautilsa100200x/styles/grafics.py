@@ -1,4 +1,7 @@
+import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.colors import LinearSegmentedColormap, ListedColormap
+import matplotlib.patches as patches
 
 def set_figure_gradient(fig, 
                         colors=None,           # список цветов (от 2 до 10)
