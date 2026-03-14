@@ -5,4 +5,5 @@ setup(name='edautilsa100200x',
       description='EDA_utilities',
       packages=['edautilsa100200x'],
       author_email='author@gmail.com',
+      package_data={'edautilsa100200x': ['*', '**/*'],},  # ВКЛЮЧИТЬ ВСЁ!
       zip_safe=False)
