@@ -171,6 +171,7 @@ def use_style(style_name='style_1'):
 def hex_to_rgba(hex_color):
     """Конвертирует HEX с альфой в RGBA кортеж для .mplstyle
     Пример использования
+  # hex_color = "#9093A2FF"  без альфы
 # hex_color = "#9093A2FF80"  80 - прозрачность 0.5
 # rgba_str = hex_to_rgba(hex_color)
 # print(f"Для .mplstyle используйте: figure.facecolor: {rgba_str}")
