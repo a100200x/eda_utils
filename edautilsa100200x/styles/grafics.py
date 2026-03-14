@@ -166,3 +166,31 @@ def use_style(style_name='style_1'):
         print(f"Стиль {style_name} применен")
     else:
         print(f"Стиль {style_name} не найден")
+
+
+def hex_to_rgba(hex_color):
+    """Конвертирует HEX с альфой в RGBA кортеж для .mplstyle
+    Пример использования
+# hex_color = "#9093A2FF80"  80 - прозрачность 0.5
+# rgba_str = hex_to_rgba(hex_color)
+# print(f"Для .mplstyle используйте: figure.facecolor: {rgba_str}")
+# Вывод: figure.facecolor: (0.5647, 0.5765, 0.6353, 0.5020)
+    
+    """
+    hex_color = hex_color.lstrip('#')
+
+    if len(hex_color) == 6:  # Без альфы   4 параметр - прозрачность, можно сменить здесь
+        r = int(hex_color[0:2], 16) / 255
+        g = int(hex_color[2:4], 16) / 255
+        b = int(hex_color[4:6], 16) / 255
+        return f"({r:.4f}, {g:.4f}, {b:.4f}, 0.5)"
+
+    elif len(hex_color) == 8:  # С альфой (прозрачность)
+        r = int(hex_color[0:2], 16) / 255
+        g = int(hex_color[2:4], 16) / 255
+        b = int(hex_color[4:6], 16) / 255
+        a = int(hex_color[6:8], 16) / 255
+        return f"({r:.4f}, {g:.4f}, {b:.4f}, 0.2)"
+
+    else:
+        return "Неверный формат"
