@@ -1,3 +1,5 @@
+import numpy as np
+
 def set_figure_gradient(fig, 
                         colors=None,           # список цветов (от 2 до 10)
                         direction='vertical',  # vertical/horizontal/diagonal/radial/corner
