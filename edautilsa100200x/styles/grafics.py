@@ -155,3 +155,12 @@ def set_figure_gradient(fig,
         ax.patch.set_alpha(0)
     
     return fig
+
+def use_style(style_name='style_1'):
+    """Применить стиль matplotlib из пакета"""
+    style_path = os.path.join(os.path.dirname(__file__), 'styles', f'{style_name}.mplstyle')
+    if os.path.exists(style_path):
+        plt.style.use(style_path)
+        print(f"Стиль {style_name} применен")
+    else:
+        print(f"Стиль {style_name} не найден")
