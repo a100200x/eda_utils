@@ -160,7 +160,7 @@ def set_figure_gradient(fig,
 def use_style(style_name='style_1'):
     """Применить стиль matplotlib из пакета"""
     style_path = os.path.join(os.path.dirname(__file__), f'{style_name}.mplstyle')
-    print(style_path)
+    print(f'Файлы пакета в папке: {style_path}')
     if os.path.exists(style_path):
         plt.style.use(style_path)
         print(f"Стиль {style_name} применен")
